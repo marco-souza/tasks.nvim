@@ -77,13 +77,11 @@ local command = function (opts)
 end
 
 function M.setup()
-  print("configuring tasks")
-
   vim.keymap.set("n", "<leader><leader>t", command({ mode = modes.toggle }))
   vim.keymap.set("n", "<leader><leader>T", command({ mode = modes.remove }))
 
   -- reload setup
-  vim.keymap.set("n", "<leader><leader>r", function ()
+  vim.keymap.set("n", "<leader><leader>tr", function ()
     R('tasks').setup()
   end)
 end
